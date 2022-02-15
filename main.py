@@ -7,11 +7,7 @@ import random
 import time
 from queue import Queue
 
-print(' __     __   __     ______   __     __   __     __     ______   __  __    
-/\ \   /\ "-.\ \   /\  ___\ /\ \   /\ "-.\ \   /\ \   /\__  _\ /\ \_\ \   
-\ \ \  \ \ \-.  \  \ \  __\ \ \ \  \ \ \-.  \  \ \ \  \/_/\ \/ \ \____ \  
- \ \_\  \ \_\\"\_\  \ \_\    \ \_\  \ \_\\"\_\  \ \_\    \ \_\  \/\_____\ 
-  \/_/   \/_/ \/_/   \/_/     \/_/   \/_/ \/_/   \/_/     \/_/   \/_____/ ')
+print('Infinity studiosⓒ')
 print('Join the discord if you have any reports or bugs. https://discord.gg/ZvH53Apb6s \n')
 
 outputfile = open("cookies.txt", "a")
