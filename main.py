@@ -7,7 +7,7 @@ import random
 import time
 from queue import Queue
 
-print('Infinity studiosⓒ')
+print('Infinity studios')
 print('Join the discord if you have any reports or bugs. https://discord.gg/ZvH53Apb6s \n')
 
 outputfile = open("cookies.txt", "a")
