@@ -1,5 +1,5 @@
 @echo off & cls
-title Run Roblox Gen
+title Roblox cookie generator
 set /p action= Install Requirements (y/n):
 if '%action%'=='y' goto requests
 of '%action%'=='n' goto start
