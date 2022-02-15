@@ -11,5 +11,4 @@ start
 
 
 :start
-python main.py
-pause
+end
