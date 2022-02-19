@@ -4,6 +4,7 @@ import os
 import threading
 import random
 import time
+from colorama import init, Fore, Style
 from queue import Queue
 
 os.system('title INF. Roblox cookie generator ^| Generates roblox cookies for you.')
