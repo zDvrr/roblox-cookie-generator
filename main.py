@@ -7,8 +7,25 @@ import random
 import time
 from queue import Queue
 
-print('Infinity studios')
-print('[!] Join the discord if you have any reports or bugs. https://discord.gg/ZvH53Apb6s \n')
+def menu():
+	clear()
+	os.system('title INF. Roblox cookie generator ^| Generates roblox cookies for you.')
+	print(f'''
+		{Fore.BLUE}
+ ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
+▓██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██ ▀█   █ ▓██▒▓  ██▒ ▓▒ ▒██  ██▒
+▒██▒▓██  ▀█ ██▒▒████ ░▒██▒▓██  ▀█ ██▒▒██▒▒ ▓██░ ▒░  ▒██ ██░
+░██░▓██▒  ▐▌██▒░▓█▒  ░░██░▓██▒  ▐▌██▒░██░░ ▓██▓ ░   ░ ▐██▓░
+░██░▒██░   ▓██░░▒█░   ░██░▒██░   ▓██░░██░  ▒██▒ ░   ░ ██▒▓░
+░▓  ░ ▒░   ▒ ▒  ▒ ░   ░▓  ░ ▒░   ▒ ▒ ░▓    ▒ ░░      ██▒▒▒ 
+ ▒ ░░ ░░   ░ ▒░ ░      ▒ ░░ ░░   ░ ▒░ ▒ ░    ░     ▓██ ░▒░ 
+ ▒ ░   ░   ░ ░  ░ ░    ▒ ░   ░   ░ ░  ▒ ░  ░       ▒ ▒ ░░  
+ ░           ░         ░           ░  ░            ░ ░     
+                                                   ░ ░         
+[!] https://discord.gg/U3Vj2rahNa | zdvrer#8413                    {Style.RESET_ALL}               
+''')
+if __name__ == "__main__":
+	main()
 
 outputfile = open("cookies.txt", "a")
 
