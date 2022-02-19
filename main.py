@@ -5,11 +5,10 @@ import threading
 import random
 import time
 from queue import Queue
-from colorama import Fore, Back, Style
+
 
 
 print(f'''
-{Fore.BLUE}
  ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
 ▓██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██ ▀█   █ ▓██▒▓  ██▒ ▓▒ ▒██  ██▒
 ▒██▒▓██  ▀█ ██▒▒████ ░▒██▒▓██  ▀█ ██▒▒██▒▒ ▓██░ ▒░  ▒██ ██░
@@ -20,7 +19,7 @@ print(f'''
  ▒ ░   ░   ░ ░  ░ ░    ▒ ░   ░   ░ ░  ▒ ░  ░       ▒ ▒ ░░  
  ░           ░         ░           ░  ░            ░ ░     
                                                    ░ ░         
-[!] https://discord.gg/U3Vj2rahNa | zdvrer#8413                    {Style.RESET_ALL}               
+[!] https://discord.gg/U3Vj2rahNa | zdvrer#8413                     
 ''')
 
 outputfile = open("cookies.txt", "a")
