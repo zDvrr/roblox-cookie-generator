@@ -7,8 +7,8 @@ import time
 from queue import Queue
 
 os.system('title INF. Roblox cookie generator ^| Generates roblox cookies for you.')
-	print(f'''
-		{Fore.BLUE}
+print(f'''
+{Fore.BLUE}
  ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
 ▓██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██ ▀█   █ ▓██▒▓  ██▒ ▓▒ ▒██  ██▒
 ▒██▒▓██  ▀█ ██▒▒████ ░▒██▒▓██  ▀█ ██▒▒██▒▒ ▓██░ ▒░  ▒██ ██░
