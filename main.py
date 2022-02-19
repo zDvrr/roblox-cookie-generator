@@ -23,8 +23,6 @@ def menu():
                                                    ░ ░         
 [!] https://discord.gg/U3Vj2rahNa | zdvrer#8413                    {Style.RESET_ALL}               
 ''')
-if __name__ == "__main__":
-	main()
 
 outputfile = open("cookies.txt", "a")
 
