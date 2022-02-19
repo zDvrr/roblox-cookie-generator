@@ -6,9 +6,7 @@ import random
 import time
 from queue import Queue
 
-def menu():
-	clear()
-	os.system('title INF. Roblox cookie generator ^| Generates roblox cookies for you.')
+os.system('title INF. Roblox cookie generator ^| Generates roblox cookies for you.')
 	print(f'''
 		{Fore.BLUE}
  ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
