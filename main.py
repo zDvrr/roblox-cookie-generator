@@ -4,10 +4,9 @@ import os
 import threading
 import random
 import time
-from colorama import Fore
-import colorama
-import sphinx
 from queue import Queue
+from colorama import Fore, Back, Style
+
 
 print(f'''
 {Fore.BLUE}
