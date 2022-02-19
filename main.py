@@ -9,7 +9,6 @@ import colorama
 import sphinx
 from queue import Queue
 
-os.system('title INF. Roblox cookie generator ^| Generates roblox cookies for you.')
 print(f'''
 {Fore.BLUE}
  ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
