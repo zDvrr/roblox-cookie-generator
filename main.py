@@ -7,7 +7,8 @@ import time
 from queue import Queue
 
 
-
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
 print(f'''
  ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
 ▓██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██ ▀█   █ ▓██▒▓  ██▒ ▓▒ ▒██  ██▒
