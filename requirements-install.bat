@@ -2,7 +2,6 @@ python -m pip install requests
 python -m pip install colorama
 python -m pip install plyer
 python -m pip install selenium
-python -m pip installbeautifulsoup4
 python -m pip install Pillow
 python -m pip install PyAutoGUI
 python -m pip install pyperclip
