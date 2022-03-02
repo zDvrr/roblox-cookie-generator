@@ -25,9 +25,9 @@ print(f'''
 print(f"""    [!] OPTIONS:    
 \n          [01] Cookie generator
 \n          [02] Cookie checker""")
-    choice = input(f"""Choice: """)
+    input(f"""Choice: """)
   
-if choice == '1' or choice == '01':
+if input == '1' or choice == '01':
         print(f"[!] Note: cookies will be in cookies.txt")
         main(
 outputfile = open("cookies.txt", "a")
