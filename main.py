@@ -25,7 +25,6 @@ print(f'''
 print(f"""    [!] OPTIONS:    
 \n          [01] Cookie generator
 \n          [02] Cookie checker""")
- global choice
     choice = input(f"""Choice: """)
   
 if choice == '1' or choice == '01':
