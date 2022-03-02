@@ -22,6 +22,15 @@ print(f'''
 [!] https://discord.gg/U3Vj2rahNa | zdvrer#8413                     
 ''')
 
+print(f"""    [!] OPTIONS:    
+\n          [01] Cookie generator
+\n          [02] Cookie checker""")
+ global choice
+    choice = input(f"""Choice: """)
+  
+if choice == '1' or choice == '01':
+        print(f"[!] Note: cookies will be in cookies.txt")
+        main(
 outputfile = open("cookies.txt", "a")
 
 x = 0
@@ -60,4 +69,4 @@ outputfile.close()
 
 t1 = time.time()
 print('[!] Done! Successfully generated all the desired cookies in cookies.txt.')
-input("Press enter to exit.")
+input("Press enter to exit."))
