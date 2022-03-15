@@ -1,27 +1,10 @@
 import re
 import string
-import os
-import threading
-import random
-import time
-import random
-from queue import Queue
+import requests
 
 
-def main():
-    os.system('cls' if os.name == 'nt' else 'clear')
-print(f'''
- ██▓ ███▄    █   █████▒██▓ ███▄    █  ██▓▄▄▄█████▓▓██   ██▓
-▓██▒ ██ ▀█   █ ▓██   ▒▓██▒ ██ ▀█   █ ▓██▒▓  ██▒ ▓▒ ▒██  ██▒
-▒██▒▓██  ▀█ ██▒▒████ ░▒██▒▓██  ▀█ ██▒▒██▒▒ ▓██░ ▒░  ▒██ ██░
-░██░▓██▒  ▐▌██▒░▓█▒  ░░██░▓██▒  ▐▌██▒░██░░ ▓██▓ ░   ░ ▐██▓░
-░██░▒██░   ▓██░░▒█░   ░██░▒██░   ▓██░░██░  ▒██▒ ░   ░ ██▒▓░
-░▓  ░ ▒░   ▒ ▒  ▒ ░   ░▓  ░ ▒░   ▒ ▒ ░▓    ▒ ░░      ██▒▒▒ 
- ▒ ░░ ░░   ░ ▒░ ░      ▒ ░░ ░░   ░ ▒░ ▒ ░    ░     ▓██ ░▒░ 
- ▒ ░   ░   ░ ░  ░ ░    ▒ ░   ░   ░ ░  ▒ ░  ░       ▒ ▒ ░░  
- ░           ░         ░           ░  ░            ░ ░     
-                                                   ░ ░         
-[!] https://discord.gg/U3Vj2rahNa | zdvrer#8413                     
+print('''INFINITY - The fastest roblox cookie generator you will ever find. 
+[!] https://discord.gg/U3Vj2rahNa | by zdvrer#8413                    
 ''')
 outputfile = open("cookies.txt", "a")
 
